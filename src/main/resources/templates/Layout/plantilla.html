@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-scurity">
     <head>
         <title>Plantilla</title>
         <meta charset="UTF-8"/>
@@ -19,6 +20,8 @@
                 <span>[[#{plantilla.pie-pagina}]] <a href="google.com" target="_blank">Gooogle.com</a></span>
                 
                 <form method="POST" th:action="@{/logout}">
+                    <b>User:</b> <span sec:authentication="name">Usuario que inicio sesión</span>
+                    <b>Roles:</b> <span sec:authentication="principal.authorities">Roles</span>
                     <a href="#" onclick="this.parentNode.submit();">Cerrar Sesión</a>
                 </form><!-- Cierre de Sesion -->
             </div>
