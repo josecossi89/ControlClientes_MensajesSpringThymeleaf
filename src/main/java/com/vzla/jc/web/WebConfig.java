@@ -36,6 +36,7 @@ public class WebConfig implements WebMvcConfigurer{
     public void addViewControllers (ViewControllerRegistry registro){
        registro.addViewController("/").setViewName("index"); //Llamado a la vista index
        registro.addViewController("/login"); //Llamado a la vista Login
-               
+       registro.addViewController("/login"); //Llamado a la vista Login 
+       registro.addViewController("/errores/403").setViewName("/errores/403");
     }
 }
