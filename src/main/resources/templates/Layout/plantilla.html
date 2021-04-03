@@ -12,7 +12,12 @@
         </header>
         
         <footer th:fragment="footer">
-            <p>[[#{plantilla.pie-pagina}]] <a href="google.com" target="_blank">Gooogle.com</a></p>
+            <div>
+                <br/>
+                <a th:href="@{/(lang=es)}">ES</a> |
+                <a th:href="@{/(lang=en)}">EN</a> |
+            </div>
+            <span>[[#{plantilla.pie-pagina}]] <a href="google.com" target="_blank">Gooogle.com</a></span>
         </footer>
     </body>
 </html>
