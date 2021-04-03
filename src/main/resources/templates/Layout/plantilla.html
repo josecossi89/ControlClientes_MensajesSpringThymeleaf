@@ -16,8 +16,13 @@
                 <br/>
                 <a th:href="@{/(lang=es)}">ES</a> |
                 <a th:href="@{/(lang=en)}">EN</a> |
+                <span>[[#{plantilla.pie-pagina}]] <a href="google.com" target="_blank">Gooogle.com</a></span>
+                
+                <form method="POST" th:action="@{/logout}">
+                    <a href="#" onclick="this.parentNode.submit();">Cerrar Sesión</a>
+                </form><!-- Cierre de Sesion -->
             </div>
-            <span>[[#{plantilla.pie-pagina}]] <a href="google.com" target="_blank">Gooogle.com</a></span>
+            
         </footer>
     </body>
 </html>
