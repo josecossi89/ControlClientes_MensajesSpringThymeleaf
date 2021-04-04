@@ -13,6 +13,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service("userDetailsService")
 @Slf4j
@@ -22,6 +23,7 @@ public class UsuarioService implements UserDetailsService{
     @Autowired
     private UsuarioDao usuarioDao;
     @Override
+    @Transactional(readOnly=true)
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
             Usuario usuario = usuarioDao.findByUsername(username);
             
