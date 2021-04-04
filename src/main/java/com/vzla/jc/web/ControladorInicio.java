@@ -42,6 +42,8 @@ public class ControladorInicio {
     //Se crea el metodo guardar con el argumento de tipo persona
     //Se invoca la interface Persona.service para que guarde los registros
     //Se retorna a la pagina de inicio con "redirect:/"
+    
+  
     public String guardar (@Valid Persona persona, Errors errores){
         if(errores.hasErrors()){
             return "modificar";
